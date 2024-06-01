@@ -1,0 +1,74 @@
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#FFFFFF;
+    color: black;
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    margin: auto;
+    width: 90vw;
+    text-align:center;
+}
+
+.images{
+    max-height: 70vh;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    width: 90vw;
+}
+
+#star-1:checked ~ section [for=star-1] svg, #star-2:checked ~ section [for=star-1] svg, #star-2:checked ~ section [for=star-2] svg, #star-3:checked ~ section [for=star-1] svg, #star-3:checked ~ section [for=star-2] svg, #star-3:checked ~ section [for=star-3] svg, #star-4:checked ~ section [for=star-1] svg, #star-4:checked ~ section [for=star-2] svg, #star-4:checked ~ section [for=star-3] svg, #star-4:checked ~ section [for=star-4] svg, #star-5:checked ~ section [for=star-1] svg, #star-5:checked ~ section [for=star-2] svg, #star-5:checked ~ section [for=star-3] svg, #star-5:checked ~ section [for=star-4] svg, #star-5:checked ~ section [for=star-5] svg {
+    transform: scale(1);
+  }
+  
+  #star-1:checked ~ section [for=star-1] svg path, #star-2:checked ~ section [for=star-1] svg path, #star-2:checked ~ section [for=star-2] svg path, #star-3:checked ~ section [for=star-1] svg path, #star-3:checked ~ section [for=star-2] svg path, #star-3:checked ~ section [for=star-3] svg path, #star-4:checked ~ section [for=star-1] svg path, #star-4:checked ~ section [for=star-2] svg path, #star-4:checked ~ section [for=star-3] svg path, #star-4:checked ~ section [for=star-4] svg path, #star-5:checked ~ section [for=star-1] svg path, #star-5:checked ~ section [for=star-2] svg path, #star-5:checked ~ section [for=star-3] svg path, #star-5:checked ~ section [for=star-4] svg path, #star-5:checked ~ section [for=star-5] svg path {
+    fill: #FFBB00;
+    stroke: #cc9600;
+    cursor: pointer;
+  }
+  .l label {
+    display: inline-block;
+    max-width: 50px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .l label svg {
+    width: 100%;
+    height: auto;
+    fill: white;
+    stroke: #CCC;
+    transform: scale(0.8);
+    transition: transform 200ms ease-in-out;
+  }
+  .l label svg path {
+    transition: fill 200ms ease-in-out, stroke 100ms ease-in-out;
+  }
+  
+  .l label[for=star-null] {
+    display: block;
+    margin: 0 auto;
+    color: #999;
+  }
+  
+  .i{
+    position: fixed;
+    overflow:hidden;
+    top: 0;
+    margin-top: -100000rem;
+    display:none;
+  }
+  
